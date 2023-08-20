@@ -1,0 +1,20 @@
+extend layout
+
+block title 
+    title Himalayan Bricks
+block append style 
+    style 
+        include ../dist/css/inquiryRes_style.css
+
+//- block append script
+//-     script(src="/dist/js/home_script.js" defer) 
+
+block append content 
+    .inquiry-res
+        h1 Thank you for contacting us! We will reply to you as soon as possible! 
+
+        .inquiry-res-img 
+            img(src="/public/img/undraw_Personal_email.png", alt="message received")
+
+        a(href="/" class="button") Go to Home Page
+    

@@ -1,0 +1,8 @@
+@use "./functions" as f;
+@use "./variables" as v;
+
+@mixin btn{
+    color: v.$color;
+    padding: f.rem(12);
+    background: v.$bgElement;
+}

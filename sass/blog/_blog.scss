@@ -1,0 +1,58 @@
+@use "../util/functions" as f;
+@use "../util/variables" as v;
+@use "../util/mixins" as m;
+
+.blog-posts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+    
+    a{
+        @include m.btn;
+        display: flex;
+        width: fit-content;
+        margin: 2rem auto;
+        
+        &:hover{
+            opacity: .8;
+        }
+    }
+    
+    &--card{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        width: min(100% - f.rem(8), f.rem(1024));
+        
+        @media (max-width: 1024px){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        
+        p{
+            text-align: justify;
+        }
+        
+        &--post{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            font-size: .9rem;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            
+            @media (max-width: 1024px){
+                width: min(100% - f.rem(8), f.rem(480));
+            }
+            
+            img{
+                width: f.rem(200);
+            }
+        }
+    }
+}

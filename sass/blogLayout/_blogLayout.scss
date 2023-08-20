@@ -1,0 +1,31 @@
+@use "../util/functions" as f;
+@use "../util/variables" as v;
+@use "../util/mixins" as m;
+
+
+.blog-post-content{
+    // padding: 0 6rem;
+    padding: 4rem 0;
+    width: min(100% - f.rem(96), f.rem(720));
+    margin: auto;
+
+    // @media (max-width: 768px) {
+    //     padding: 0 4rem;
+    // }
+
+    // @media (max-width: 425px) {
+    //     padding: 0 2rem;
+    // }
+    
+    .head-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        
+        img{
+            width: min(100% - f.rem(10), f.rem(720));
+        }
+
+    }
+}

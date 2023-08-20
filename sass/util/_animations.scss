@@ -1,0 +1,95 @@
+@keyframes navMenuHamOpen {
+    from{
+        opacity: 0;
+        left: -100vw;
+    }
+    to{
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes navMenuHamClose {
+    from{
+        opacity: 1;
+        left: 0;
+    }
+    to{
+        opacity: 0;
+        left: -100vw;
+    }
+}
+
+.nav-menu-fadein{
+    animation: navMenuHamOpen 110ms ease-in-out forwards;
+}
+
+.nav-menu-fadeout{
+    animation: navMenuHamClose 110ms ease-in-out forwards;
+}
+
+
+@keyframes loginEntry {
+    from{
+        opacity: 0;
+        top: -100vh;
+    }
+
+    to{
+        opacity: 1;
+        top: 15vh;
+    }
+    
+}
+
+@keyframes loginOutro {
+    from{
+        opacity: 1;
+        top: 15vh;
+    }
+
+    to{
+        opacity: 0;
+        top: -100vh;
+    }
+    
+}
+
+.login-entry{
+    animation: loginEntry 110ms ease-in-out forwards;
+}
+
+.login-outro{
+    animation: loginOutro 110ms ease-in-out forwards;
+}
+
+
+
+@keyframes faqAni {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+.faqAni{
+    animation: faqAni 550ms ease-in-out forwards;
+}
+
+
+
+@keyframes mobile {
+    from{
+        transform: scale3d(.7, .7, 1) rotate3d(0, 1, 1, 5deg);
+    }
+    to{
+        transform: scale3d(1, 1, 1) rotate3d(0, 0, 0, 5deg);
+    }
+}
+
+.mobileEntry{
+    animation: mobile 1s ease-out forwards;
+}

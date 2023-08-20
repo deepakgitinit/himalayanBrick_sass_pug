@@ -1,0 +1,19 @@
+extend layout 
+
+block title 
+    title 404 Page Not Found - Himalayan Bricks
+
+block append style 
+    style 
+        include ../dist/css/404_style.css
+
+//- block append script
+    //- script(src="/dist/js/404_script.js" defer) 
+
+block append content
+    .page-404
+        h1 404 - Page Not Found
+        .img-404
+            img(src="public/img/undraw_warning_404.png", alt="")
+        .button-404 
+            a(href="/") Go to Home

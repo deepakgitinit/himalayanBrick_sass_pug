@@ -1,0 +1,16 @@
+//- block script
+//-     script(src="/dist/js/admin_script.js" defer) 
+
+form(action="/admin" , method="post") 
+    select(name="name" placeholder="enter name")
+        option(value="cement") Cement
+        option(value="steel") Steel
+        option(value="bricks") Brick
+    input(type="text" name="price" placeholder="enter price" required)
+    input(type="submit", value="submit")
+
+.prices  
+    //- Cement #{adminPrice}
+    p Cement #{cementPrice},
+    p Steel #{steelPrice},
+    p Bricks #{brickPrice}

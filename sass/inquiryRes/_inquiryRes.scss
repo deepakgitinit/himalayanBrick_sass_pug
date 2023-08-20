@@ -1,0 +1,29 @@
+@use "../util/functions" as f;
+@use "../util/variables" as v;
+@use "../util/mixins" as m;
+
+.inquiry-res{
+    // display: flex;
+    // flex-direction: column;
+    padding: 4rem 0;
+    width: min(100% - f.rem(96), f.rem(720));
+    margin: auto;
+    text-align: center;
+
+    .inquiry-res-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem 0;
+
+        img{
+            width: min(100% - f.rem(10), f.rem(480));
+            border-radius: 1rem;
+        }
+
+    }
+
+    a{
+        @include m.btn;
+    }
+}

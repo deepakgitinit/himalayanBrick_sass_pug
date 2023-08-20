@@ -1,0 +1,31 @@
+@use "../util/functions" as f;
+@use "../util/variables" as v;
+@use "../util/mixins" as m;
+
+.page-404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 4rem 0 4rem 0;
+    text-align: center;
+
+    .img-404{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+
+        img{
+            width: min(100% - 1rem, 480px);
+            border-radius: 2rem;
+        }
+    }
+
+    .button-404{
+        margin-top: 4rem;
+        a{
+            @include m.btn;
+        }
+    }
+}

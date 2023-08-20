@@ -1,0 +1,122 @@
+extend layout
+
+block title 
+    title Himalayan Bricks
+block append style 
+    style 
+        include ../dist/css/home_style.css
+        
+block append script
+    script(src="/dist/js/home_script.js" defer) 
+
+block append content 
+    main
+        section.slide 
+            .slide-desc
+                h1 Himalayan Bricks
+                p Welcome to Himalayan Bricks. We will provide you best quality materials directly at very low prices. You can directly send us an order from here and we will contact you and deliver your materials.
+                //- .slide-desc-btn
+                //-     a(href="/inquiry") Send Us Inquiry 
+                .btn-container 
+                        .center 
+                            button.btn 
+                                a(href="/inquiry")
+                                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                    </svg>
+                                    span Order Now
+            .slide-img
+                .mobile
+                    <iframe width="222" height="390" src="https://www.youtube.com/embed/gQcZ57BElDk" title="Himalayan Bricks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+
+        section.marquee 
+            h1 The prices of the materials:
+            div.marquee-cards
+                .marquee-cards--logo
+                    h1 Cement
+                    p ₹#{cementPrice}
+                .marquee-cards--logo
+                    h1 Bricks
+                    p ₹#{brickPrice}
+                .marquee-cards--logo
+                    h1 Steel
+                    p ₹#{steelPrice}
+
+        section.worth-card
+            h1 Check why it is worth by choosing us! 
+            .worth-card--container
+                .worth-card--first 
+                    img(src="/public/img/quality-medal.svg", alt="quality")
+                    p Best Quality Materials.
+                .worth-card--second 
+                    img(src="/public/img/low-price.svg", alt="low-price")
+                    p Lowest Prices on Materials.
+                .worth-card--third
+                    img(src="/public/img/delivery-on-time-svgrepo-com.svg", alt="on-time-delivery")
+                    p On time Delivery.
+        
+        section.blog 
+            h1 Our latest Blog Posts 
+            .blog--card
+                .blog--card--post
+                    img(src="https://1.bp.blogspot.com/-Gis-eNiOpEc/YKdoo2Rv2KI/AAAAAAAAC-c/kWo55JtwgHw2g3QMvMBP2aNxujdygIgtACLcBGAsYHQ/w640-h362/Cement.jpg", alt="")
+                    h1 Cement Quality and Production in India  
+                    //- p Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore minima qui possimus natus itaque, nulla amet impedit tenetur eum, ipsa illo.
+                    a(href="/blog/cement-production-in-india" class="button") Read More >>
+                .blog--card--post
+                    img(src="https://4.imimg.com/data4/TC/IS/IMOB-43715702/images-8-500x500.jpg", alt="")
+                    h1 Bricks procution and types of Bricks
+                    //- p Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore minima qui possimus natus itaque, nulla amet impedit tenetur eum, ipsa illo.
+                    a(href="/blog/bricks-production-and-types" class="button") Read More >>
+                .blog--card--post
+                    img(src="https://www.pinoybisnes.com/wp-content/uploads/2016/05/steel.jpg", alt="")
+                    h1 Steel production and market in India 
+                    //- p Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore minima qui possimus natus itaque, nulla amet impedit tenetur eum, ipsa illo.
+                    a(href="blog/steel-production-and-market" class="button") Read More >>
+            a(href="/blog") Read More Posts 
+
+        section.faq
+            h1 Frequenty Asked Questions 
+            .faq--card 
+                h3
+                    | How to order from website? 
+                    span.faq--card-sym +
+                p.faq--card--p
+                    span(style="font-weight: bold") Step I. 
+                    | Go to Inquiry Page or 
+                    a(href="/inquiry")
+                            span(style="text-decoration: underline") Click Here 
+                    | and then select there your Name, Phone Number and If you want you can also select material and quantity. 
+                    br
+                    span(style="font-weight: bold") Step II. 
+                    | After filling details, you can send us on mail or send us on whatsapp(if you have installed on your phone.) 
+                    br
+                    | Thats all! We will contact you as soon as possible and deliver your Materials.
+            .faq--card 
+                h3
+                    | Where to check latest Material Prices prices? 
+                    span.faq--card-sym +
+                p.faq--card--p 
+                    | • You can check our latest prices of materials on our website's 
+                    a(href="/")
+                        span(style="text-decoration: underline") Home Page
+                    | . We are updating our latest prices on daily basis.
+            .faq--card 
+                h3
+                    | How to check availability to our area? 
+                    span.faq--card-sym +
+                p.faq--card--p 
+                    | • When we will contact you back we will ask your address for delivery to confirm that whether we can deliver or not. We are expanding our availability to more areas right now. 
+                    br
+                    | • Or you can ask our bot that your area is available for delivery or not.
+            .faq--card 
+                h3
+                    | How to check price or order from whatsapp? 
+                    span.faq--card-sym +
+                p.faq--card--p 
+                    | • In your whatsapp you have to enter your Name, Address and then send us. If you can send more details like Material and Quantity that will be more better. After receiving your message we will send you confirm your order.
+                    br
+                    | • To check Prices of materials on whatsapp, you can check on our Whatsapp Catalogue.
+
+

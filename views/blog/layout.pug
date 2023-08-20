@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        block title
+        block style
+            link(rel="preconnect" href="https://fonts.googleapis.com")
+            link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+            link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet")
+            style
+                include ../../dist/css/layout_style.css
+                include ../../dist/css/blogLayout_style.css
+
+        block script
+            script(src="/dist/js/layout_script.js" defer) 
+    body
+        header 
+            .form.nav-menu-login-page
+                h1 Chat-Bot
+                .form-page
+                    .bot-page
+                        div Try help, order or hello!
+                    input(id="login-page-input-one" class="input" type="text" name="input" placeholder="Enter your Input" required)
+                    button(id="login-page-login" class="button" onclick="botInsert()" type="submit") ▷
+                .nav-menu-login-page-remove
+                    p ✕
+            .speed-contact 
+                ul 
+                    li
+                        img(src="../public/img/appbox_icon/call.svg", alt="")
+                    li
+                        img(src="../public/img/appbox_icon/social_media_icon/logo-whatsapp.svg", alt="")
+                    li
+                        img(src="../public/img/appbox_icon/mail.svg", alt="")
+
+            section.nav
+                .nav-logo 
+                    a(href="/") 
+                        h1 Himalayan Bricks
+                    //- img(src="https://icons.iconarchive.com/icons/fps.hu/free-christmas-flat-circle/512/home-icon.png", alt="", srcset="")
+                .nav-menu
+                    ul.nav-menu-link
+                        a(href="/") Home
+                        a(href="/services") Services
+                        a(href="/about") About us
+                    ul.nav-menu-button
+                        a(href="/contact") Contact Us
+                a(id="nav-menu-login" href="javascript:void(0);") ⌨
+                .nav-menu-hamburger
+                    div 
+                    div 
+                    div
+            .scroll-to-top
+                p ↑
+                
+        block content
+
+        footer 
+            section.footer
+                .footer-desc
+                    h1 Himalayan Bricks
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eveniet suscipit molestias reprehenderit similique maxime culpa perspiciatis beatae, rerum eaque earum cum.
+                .footer-links
+                    h1 Links
+                    a(href="/") Home
+                    a(href="/services") Services
+                    a(href="/about") About us
+                    a(href="/contact") Contact us
+                .footer-solinks
+                    h1 Social Links
+                    a(href="/") Facebook
+                    a(href="/services") Twitter
+                    a(href="/about") Youtube
+                    a(href="/contact") Whatsapp
+            .footer-foot 
+                p Ⓒ 2023-2024 Himalayan Bricks | All Rights Reserved
+
+

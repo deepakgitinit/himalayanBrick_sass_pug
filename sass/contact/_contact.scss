@@ -1,0 +1,42 @@
+@use "../util/functions" as f;
+@use "../util/variables" as v;
+@use "../util/mixins" as m;
+
+
+.form{
+    background: none;
+    padding-top: 0;
+}
+
+.contact-hr{
+    margin: 4rem;
+}
+
+.contact-us-now{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    h1{
+        margin: 1rem 0;
+    }
+
+    div{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+        text-align: center;
+        
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        a{
+            padding: 1rem;
+            background: v.$bgElement;
+            border-radius: 2rem;
+        }
+    }
+}

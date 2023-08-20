@@ -1,0 +1,36 @@
+extend layout 
+
+block title 
+    title Inquiry - Himalayan Bricks
+
+block append style 
+    style 
+        include ../dist/css/inquiry_style.css
+
+block append script
+    script(src="/dist/js/inquiry_script.js" defer) 
+
+block append content
+    section.form#home-form 
+            h1 Send us Inquiry from Here
+            form.form-page(action="/inquiry", method="post") 
+                input(class="input" id="input-name" type="text" name="name" placeholder="Name*" required)
+                input(class="input" id="input-phoneno" type="text" name="phoneno" placeholder="Phone No*" required)
+                .select-form
+                    input(type="text" id="input-material" name="material" class="select" placeholder="Choose Material" readonly)
+                    .options
+                        div(onclick="inputVal('Cement')") Cement 
+                        div(onclick="inputVal('Bricks')") Bricks 
+                        div(onclick="inputVal('Tiles')") Tiles
+
+                div(class="select-form self")
+                    input(type="text" id="input-quantity" name="quantity" class="select sel" placeholder="Choose Quantity" readonly)
+                    div(class="options opt")
+                        div(onclick="inVal('10-100')") 10-100
+                        div(onclick="inVal('100-1000')") 100-1000
+                        div(onclick="inVal('More than 1000')") More than 1000
+                input(class="input" id="input-address" type="text" name="address" placeholder="Address or Pin")
+                input(class="input" id="input-date" type="text" name="date" placeholder="Date" style="display: none")
+                input(class="button" type="submit" value="Mail")
+                a(href="#" onclick="whatsappFn()")
+                    input(class="button" type="submit" value="Whatsapp")
